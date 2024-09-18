@@ -95,8 +95,8 @@ def circuit_parsing(file_name, list_input_node, list_output_node, list_gates):
             output = get_output(line)  # get the output pin name
             # adding the pin if not inserted yet
             list_output_node.append(output) if output not in list_output_node else None
-        # check if it not empty
-        elif line.strip():
+        # check if it not empty or it is a comment
+        elif line.strip() and line[0] != '#':
             # get the gate
             gate = get_gate(line)
             list_gates.append(gate) if gate not in list_gates else None
@@ -191,7 +191,9 @@ def circuit_levelization(list_input_node, list_output_node, list_gates, dict_lev
 def main():
     # file_name = "benchmark1.txt"
     # file_name = "benchmark2.txt"
-    file_name = "benchmark3.txt"
+    # file_name = "benchmark3.txt"
+    # file_name = "hw1.bench"
+    file_name = "c17.bench"
     list_input_node = []
     list_output_node = []
     list_gates = []
