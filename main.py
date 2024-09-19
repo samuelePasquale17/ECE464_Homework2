@@ -192,8 +192,8 @@ def main():
     # file_name = "benchmark1.txt"
     # file_name = "benchmark2.txt"
     # file_name = "benchmark3.txt"
-    # file_name = "hw1.bench"
-    file_name = "c17.bench"
+    file_name = "hw1.bench"
+    # file_name = "c17.bench"
     list_input_node = []
     list_output_node = []
     list_gates = []
